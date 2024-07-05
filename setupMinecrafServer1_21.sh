@@ -21,7 +21,7 @@ while true; do
   fi
 done
 
-# Aktualisieren des Paketlisten und Upgrade des Systems
+# Aktualisieren der Paketlisten und Upgrade des Systems
 apt update && apt upgrade -y
 
 # Installation von screen (falls noch nicht vorhanden)
@@ -64,7 +64,7 @@ echo eula=true > "$INSTALL_DIR/minecraft-server/eula.txt"
 echo '#!/bin/bash' > "$INSTALL_DIR/minecraft-server/start.sh"
 echo 'screen -dmS minecraft-server java -Xmx2048M -Xms1024M -jar server.jar nogui' >> "$INSTALL_DIR/minecraft-server/start.sh"
 
-# Ausführen der start.sh
+# Rechtezuweisung der start.sh
 chmod +x "$INSTALL_DIR/minecraft-server/start.sh"
 
 # Erfolgsmeldung und Hinweis zum Starten des Servers
