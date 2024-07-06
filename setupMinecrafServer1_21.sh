@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Prüfen, ob das Skript mit Root-Rechten ausgeführt wird
-if [ $(whoami) != "root" ]; then
-  echo "Dieses Skript muss mit Root-Rechten ausgeführt werden!"
+# Prüfen, ob das Skript mit Root-Rechten oder sudo ausgeführt wird
+if [ $(id -u) -ne 0 ]; then
+  echo "Dieses Skript muss mit Root-Rechten oder sudo ausgeführt werden!"
   exit 1
 fi
 
@@ -25,22 +25,22 @@ done
 apt update && apt upgrade -y
 
 # Installation von screen (falls noch nicht vorhanden)
-if ! dpkg -l screen | grep -q screen; then
+if ! dpkg -l | grep -q screen; then
   apt install screen -y
 fi
 
 # Installation von wget (falls noch nicht vorhanden)
-if ! dpkg -l wget | grep -q wget; then
+if ! dpkg -l | grep -q wget; then
   apt install wget -y
 fi
 
 # Installation von apt-transport-https (falls noch nicht vorhanden)
-if ! dpkg -l apt-transport-https | grep -q apt-transport-https; then
+if ! dpkg -l | grep -q apt-transport-https; then
   apt install apt-transport-https -y
 fi
 
 # Installation von gpg (falls noch nicht vorhanden)
-if ! dpkg -l gpg | grep -q gpg; then
+if ! dpkg -l | grep -q gpg; then
   apt install gpg -y
 fi
 
@@ -49,6 +49,7 @@ wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --
 echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
 
 # Installation von Java 22
+apt update # Repository-Listen nach dem Hinzufügen aktualisieren
 apt install temurin-22-jdk -y
 
 # Erstellen des Minecraft Server Verzeichnisses
