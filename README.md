@@ -3,7 +3,7 @@ Shell Script for Linux (LTS Debian/Ubuntu) to easily and automatically setup a v
 
 # How To Download
 ### Please put sudo before the command if you don't have root permissions directly!
-``wget https://github.com/Jxstin1337/linux-setup-minecraft-1_21-server/blob/main/setupMinecrafServer1_21.sh``
+``wget https://raw.githubusercontent.com/Jxstin1337/linux-setup-minecraft-1_21-server/main/setupMinecrafServer1_21.sh``
 
 # How To Grant Permissions
 ### Please put sudo before the command if you don't have root permissions directly!
