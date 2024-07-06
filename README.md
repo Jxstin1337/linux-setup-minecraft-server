@@ -7,8 +7,8 @@ Shell Script for Linux (LTS Debian/Ubuntu) to easily and automatically setup a v
 
 # How To Grant Permissions
 ### Please put sudo before the command if you don't have root permissions directly!
-``sudo chmod +x setupMinecrafServer1_21.sh``
+``chmod +x setupMinecrafServer1_21.sh``
 
 # How To Use
 ### Please put sudo before the command if you don't have root permissions directly!
-``sudo ./setupMinecrafServer1_21.sh``
+``./setupMinecrafServer1_21.sh``
