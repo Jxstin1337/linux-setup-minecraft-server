@@ -2,10 +2,10 @@
 Shell Script for Linux (LTS Debian/Ubuntu) to easily and automatically setup a vanilla minecraft 1.21 server.
 
 # How To Download
-``wget https://github.com/Jxstin1337/linux-setup-minecraft-1_21-server/blob/main/setupMinecrafServer1_21.sh``
+``sudo wget https://github.com/Jxstin1337/linux-setup-minecraft-1_21-server/blob/main/setupMinecrafServer1_21.sh``
 
 # How To Grant Permissions
-``chmod +x setupMinecrafServer1_21.sh``
+``sudo chmod +x setupMinecrafServer1_21.sh``
 
 # How To Use
-``./setupMinecrafServer1_21.sh``
+``sudo ./setupMinecrafServer1_21.sh``
