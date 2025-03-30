@@ -56,7 +56,7 @@ apt install temurin-22-jdk -y
 mkdir -p "$INSTALL_DIR/minecraft-server"
 
 # Herunterladen der Server-JAR
-wget -O "$INSTALL_DIR/minecraft-server/server.jar" https://piston-data.mojang.com/v1/objects/450698d1863ab5180c25d7c804ef0fe6369dd1ba/server.jar
+wget -O "$INSTALL_DIR/minecraft-server/server.jar" https://piston-data.mojang.com/v1/objects/e6ec2f64e6080b9b5d9b471b291c33cc7f509733/server.jar
 
 # Erstellen der eula.txt
 echo eula=true > "$INSTALL_DIR/minecraft-server/eula.txt"
